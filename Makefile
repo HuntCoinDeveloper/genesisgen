@@ -1,13 +1,11 @@
-
 BIN = genesis
 SOURCE = genesis.c
-CFLAGS = -g -Wall -Werror
 LDFLAGS = -lcrypto
 
 all: $(BIN)
 
 $(BIN): $(SOURCE)
-	gcc $(CFLAGS) $(LDFLAGS) -o $@ $<
+	gcc $< -o $@ $(LDFLAGS)
 
 .PHONY: clean
 clean:
